@@ -27,7 +27,10 @@
 .weui-search-bar__text {
     display: inline-block;
     font-size: 14px;
-    vertical-align: middle;
+    height: 28px;
+    line-height: 28px;
+    position: relative;
+    top: -2px;
 }
 
 .weui-search-bar__form {

@@ -1,5 +1,7 @@
 {
   "usingComponents": {
-    "search-bar": "/components/search-bar/search-bar"
+    "search-bar": "/components/search-bar/search-bar",
+    "clothes-list": "/components/clothes-list/clothes-list"
+
   }
 }

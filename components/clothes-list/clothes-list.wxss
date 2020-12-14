@@ -1,0 +1,41 @@
+.clothes-list {
+    overflow-x: scroll;
+    display: flex;
+}
+
+.item {
+    flex: none;
+    margin-left: 10px;
+    width: 130px;
+    border: 1px solid purple;
+    background-color: #fff;
+}
+
+.item>view {
+    width: 100%;
+}
+
+.img-wrapper {
+    width: 130px;
+    height: 130px;
+}
+
+.img-wrapper image {
+    width: 100%;
+}
+
+.name {
+    font-size: 14px;
+}
+
+.desc {
+    display: flex;
+}
+
+.price {}
+
+.try {}
+
+.try image {
+    width: 30%;
+}

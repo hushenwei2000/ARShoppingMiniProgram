@@ -1,0 +1,77 @@
+<view class="clothes-list">
+    <view class="item">
+        <view class="img-wrapper">
+            <image mode="widthFix" src="/image/cloth1.png"></image>
+        </view>
+        <view class="name">
+            男的女的请问啊我都难打开威宁达空间啊开网店那uk
+        </view>
+        <view class="desc">
+            <view class="price">￥12380</view>
+            <view class="try">
+                立即试穿
+                <image mode="widthFix" src="/image/tryit.png"></image>
+            </view>
+        </view>
+    </view>
+    <view class="item">
+        <view class="img-wrapper">
+            <image mode="widthFix" src="/image/cloth1.png"></image>
+        </view>
+        <view class="name">
+            男的女的请问啊我都难打开威宁达空间啊开网店那uk
+        </view>
+        <view class="desc">
+            <view class="price">￥12380</view>
+            <view class="try">
+                立即试穿
+                <image mode="widthFix" src="/image/tryit.png"></image>
+            </view>
+        </view>
+    </view>
+    <view class="item">
+        <view class="img-wrapper">
+            <image mode="widthFix" src="/image/cloth1.png"></image>
+        </view>
+        <view class="name">
+            男的女的请问啊我都难打开威宁达空间啊开网店那uk
+        </view>
+        <view class="desc">
+            <view class="price">￥12380</view>
+            <view class="try">
+                立即试穿
+                <image mode="widthFix" src="/image/tryit.png"></image>
+            </view>
+        </view>
+    </view>
+    <view class="item">
+        <view class="img-wrapper">
+            <image mode="widthFix" src="/image/cloth1.png"></image>
+        </view>
+        <view class="name">
+            男的女的请问啊我都难打开威宁达空间啊开网店那uk
+        </view>
+        <view class="desc">
+            <view class="price">￥12380</view>
+            <view class="try">
+                立即试穿
+                <image mode="widthFix" src="/image/tryit.png"></image>
+            </view>
+        </view>
+    </view>
+    <view class="item">
+        <view class="img-wrapper">
+            <image mode="widthFix" src="/image/cloth1.png"></image>
+        </view>
+        <view class="name">
+            男的女的请问啊我都难打开威宁达空间啊开网店那uk
+        </view>
+        <view class="desc">
+            <view class="price">￥12380</view>
+            <view class="try">
+                立即试穿
+                <image mode="widthFix" src="/image/tryit.png"></image>
+            </view>
+        </view>
+    </view>
+</view>

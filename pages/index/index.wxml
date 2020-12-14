@@ -10,8 +10,25 @@
         </swiper>
     </view>
     <view class="squares">
-        <view class="squares-item"></view>
-        <view class="squares-item"></view>
-        <view class="squares-item"></view>
+        <view class="squares-item">
+            <image mode="widthFix" src="/image/dress.png"></image>
+            <text>试衣</text>
+        </view>
+        <view class="squares-item">
+            <image mode="widthFix" src="/image/makeup.png"></image>
+            <text>试妆</text>
+        </view>
+        <view class="squares-item">
+            <image mode="widthFix" src="/image/dress.png"></image>
+            <text>敬请期待</text>
+        </view>
     </view>
+    <view class="title">
+        当季新款
+    </view>
+    <clothes-list></clothes-list>
+    <view class="title">
+        热门推荐
+    </view>
+    <clothes-list></clothes-list>
 </view>
