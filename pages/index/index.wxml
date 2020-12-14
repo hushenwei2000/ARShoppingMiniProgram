@@ -1,3 +1,17 @@
 <view>
-<search-bar></search-bar>
+    <search-bar></search-bar>
+    <view class="swiper-container">
+        <swiper indicator-active-color='#fff'>
+            <block wx:for="{{imgs}}" wx:for-index="index" wx:key="swiperItem" wx:for-item="item">
+                <swiper-item class="swiper-items">
+                    <image class="swiper-image" src="{{item}}"></image>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <view class="squares">
+        <view class="squares-item"></view>
+        <view class="squares-item"></view>
+        <view class="squares-item"></view>
+    </view>
 </view>
