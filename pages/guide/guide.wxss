@@ -1,0 +1,61 @@
+.swiper-container {
+    position: relative;
+    height: 50vh;
+}
+
+swiper {
+    margin-top: 25vh;
+    height: 50vh;
+    width: 100%;
+}
+
+.swiper-image {
+    height: 100%;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.dots {
+    width: 170rpx;
+    height: 20rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 40px;
+    left: 53%;
+    transform: translateX(-50%);
+    bottom: 80rpx;
+}
+
+/*未选中时的小圆点样式 */
+
+.dot {
+    width: 10rpx;
+    height: 10rpx;
+    border-radius: 14rpx;
+    margin-right: 26rpx;
+    background-color: #de8a78;
+    transition: all 1s;
+}
+
+/*选中以后的小圆点样式  */
+
+.active {
+    width: 70rpx;
+    height: 10rpx;
+    background-color: #fc4308;
+}
+
+.button-top {
+    position: relative;
+    height: 40px;
+    width: 120px;
+}
+
+.button-bottom {
+    position: relative;
+    height: 40px;
+    width: 120px;
+}
