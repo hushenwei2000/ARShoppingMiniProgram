@@ -4,6 +4,7 @@
     margin: 10px auto;
     height: 100px;
     box-shadow: 2px 2px 2px #dfdfdf, -2px 2px 4px #dfdfdf, 2px 4px 14px #dfdfdf;
+    transition: all 1s;
 }
 
 .item-left {

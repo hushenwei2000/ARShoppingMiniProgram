@@ -44,6 +44,8 @@
 .desc {
     width: 90%;
     margin: 15px auto;
+    height: 15px;
+    line-height: 15px;
     display: flex;
     justify-content: space-around;
 }
@@ -51,28 +53,43 @@
 .price {
     font-size: 14px;
     color: rgb(208, 2, 27);
+    height: 15px;
+    line-height: 15px;
 }
 
 .try {
     width: 50%;
-    overflow: hidden;
-    border: 1px solid red;
+    display: flex;
+    justify-content: flex-end;
+    height: 15px;
+    line-height: 15px;
 }
 
 .try text {
-    float: left;
     display: block;
+    margin-right: 4px;
     font-size: 10px;
     color: rgb(155, 155, 155);
-    border: 1px solid red;
+    height: 15px;
+    line-height: 15px;
 }
 
 .try-img {
-    float: right;
     width: 15px;
-    height: 10px;
-    border: 1px solid red;
+    height: 15px;
+    line-height: 15px;
     background-color: rgb(205, 128, 0);
+    padding: 0 5px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.try-img image {
+    display: block;
+    width: 11px;
+    height: 11px;
 }
 
 .title {

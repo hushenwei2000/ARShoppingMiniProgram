@@ -6,7 +6,7 @@ Page({
      */
     data: {
         imgs: [
-            "/image/cloth1.png","/image/cloth2.png","/image/cloth3.png"
+            "/image/cloth1.jpg","/image/cloth2.jpg","/image/cloth3.jpg"
           ],
     },
 

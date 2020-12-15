@@ -1,10 +1,10 @@
 {
   "pages": [
     "pages/guide/guide",
-    "pages/home/home",
-    "pages/index/index",
-    "pages/collection/collection",
     "pages/mall/mall",
+    "pages/index/index",
+    "pages/home/home",
+    "pages/collection/collection",
     "pages/detail/detail",
     "pages/logs/logs"
   ],
@@ -42,7 +42,7 @@
       },
       {
         "pagePath": "pages/collection/collection",
-        "iconPath": "image/carthl.png",
+        "iconPath": "image/cart.png",
         "selectedIconPath": "image/carthl.png",
         "text": "收藏"
       },

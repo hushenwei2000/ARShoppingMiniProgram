@@ -19,7 +19,7 @@
             <text>试妆</text>
         </view>
         <view class="squares-item">
-            <image mode="widthFix" src="/image/dress.png"></image>
+            <image mode="widthFix" src="/image/ellipsis.png"></image>
             <text>敬请期待</text>
         </view>
     </view>

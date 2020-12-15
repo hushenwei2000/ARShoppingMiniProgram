@@ -20,7 +20,7 @@ Component({
       text: ""
     }, {
       pagePath: "/pages/collection/collection",
-      iconPath: "/image/carthl.png",
+      iconPath: "/image/cart.png",
       selectedIconPath: "/image/carthl.png",
       text: "收藏"
     }, {
@@ -36,10 +36,15 @@ Component({
     switchTab(e) {
       const data = e.currentTarget.dataset
       const url = data.path
+      
       wx.switchTab({url})
-      this.setData({
-        selected: data.index
-      })
+      var that = this
+      // setTimeout(() => {
+        that.setData({
+          selected: data.index
+        })
+      // }, 1000);
+      
     }
   }
 })
