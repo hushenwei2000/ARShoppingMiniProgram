@@ -1,17 +1,17 @@
 <view class="swiper-container">
     <swiper indicator-active-color='#fff' current="{{currentSwiper}}" bindchange="swiperChange">
-        <block wx:for="{{imgs}}" wx:for-index="index" wx:key="swiperItem" wx:for-item="item">
+        <block wx:for="{{guideList}}" wx:for-index="index" wx:key="swiperItem" wx:for-item="item">
             <swiper-item class="swiper-items">
-                <image class="swiper-image" src="{{item}}"></image>
+                <image class="swiper-image" src="{{item.img}}"></image>
+                <view class="title">{{item.title}}</view>
+                <view class="desc">{{item.desc}}</view>
             </swiper-item>
         </block>
     </swiper>
     <view class="dots">
-        <block wx:for="{{imgs}}" wx:key>
+        <block wx:for="{{guideList}}" wx:key>
             <view class="dot{{index == currentSwiper ? ' active' : ''}}"></view>
         </block>
     </view>
 </view>
-<button class="button-top" bindtap="handleNextPage" wx:if="{{index != imgs.length - 1}}">Next</button>
-<button class="button-top" bindtap="handleStart" wx:if="{{index == imgs.length - 1}}">Start</button>
-<button class="button-bottom" bindtap="handleSkip">Skip</button>
+<button class="button-bottom" bindtap="handleSkip" bindtouchstart="handleTouchStart" bindtouchend="handleTouchEnd" style="background-color:{{buttonBgc}};">Start</button>

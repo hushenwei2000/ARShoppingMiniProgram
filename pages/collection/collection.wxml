@@ -1,0 +1,39 @@
+<view class="item">
+    <view class="item-left" bindtap="handleItemTap">
+        <image src="/image/cloth1.png"></image>
+
+    </view>
+    <view class="item-mid">
+        <view class="title">女装 2020巴黎世家高级轻型羽绒茧形连帽外套 429458</view>
+        <view class="price">￥12340</view>
+    </view>
+    <view class="item-right grey">
+        缺货
+    </view>
+</view>
+<view class="item" bindtap="handleItemTap">
+    <view class="item-left">
+        <image src="/image/cloth2.png"></image>
+
+    </view>
+    <view class="item-mid">
+        <view class="title">女装 2020巴黎世家高级轻型羽绒茧形连帽外套 429458</view>
+        <view class="price">￥12340</view>
+    </view>
+    <view class="item-right grey">
+        已下架
+    </view>
+</view>
+<view class="item" bindtap="handleItemTap">
+    <view class="item-left">
+        <image src="/image/cloth3.png"></image>
+
+    </view>
+    <view class="item-mid">
+        <view class="title">女装 2020巴黎世家高级轻型羽绒茧形连帽外套 429458</view>
+        <view class="price">￥12340</view>
+    </view>
+    <view class="item-right">
+        购买
+    </view>
+</view>

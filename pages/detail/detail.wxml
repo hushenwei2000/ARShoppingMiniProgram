@@ -1,0 +1,25 @@
+<view class="swiper-container">
+    <swiper indicator-active-color='#fff'>
+        <block wx:for="{{imgs}}" wx:for-index="index" wx:key="swiperItem" wx:for-item="item">
+            <swiper-item class="swiper-items">
+                <image class="swiper-image" src="{{item}}"></image>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>
+<view class="title">女装 高级轻型羽绒茧形连帽外套 429458</view>
+<view class="desc">
+    <view class="price">￥13400</view>
+    <view class="like">
+        <image src="/image/like.png" mode="widthFix"></image>
+    </view>
+</view>
+<view class="detail">
+    <view class="detail-top">
+        <view>产品细节</view>
+        <view>PRODUCT DETAIL</view>
+    </view>
+    <view class="detail-bottom">
+        <image src="/image/tryit.png"></image>
+    </view>
+</view>

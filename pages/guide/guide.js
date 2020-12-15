@@ -1,39 +1,45 @@
-// pages/guide/guide.js
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
-    imgs: [
-      "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2522069454.jpg",
-      "https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2522778567.jpg",
-      "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2523516430.jpg",
-    ],
+    guideList: [{
+      img: "/image/guide1.png",
+      title: "在家即可一键试衣",
+      desc: "方便快捷，社恐福音"
+    }, {
+      img: "/image/guide2.png",
+      title: "美妆魔镜一键试妆",
+      desc: "色号搭配，一网打尽"
+    }, {
+      img: "/image/guide3.png",
+      title: "心愿清单，时刻跟踪",
+      desc: "实时更新官网库存"
+    }],
     img: "http://img.kaiyanapp.com/7ff70fb62f596267ea863e1acb4fa484.jpeg",
     currentSwiper: 0,
+    index: 1,
+    buttonBgc: "#D78906"
   },
-  swiperChange: function(e) {
+  swiperChange: function (e) {
     this.setData({
       currentSwiper: e.detail.current
     })
   },
-  handleNextPage() {
+
+  handleTouchStart() {
     this.setData({
-      index: this.data.index + 1
+      buttonBgc: "#dd9519"
     })
   },
-  handleStart() {
-
+  handleTouchEnd() {
+    this.setData({
+      buttonBgc: "#D78906"
+    })
   },
   handleSkip() {
-    wx.navigateTo({
-      url: 'pages/index/index',
-      events: events,
-      success: (result) => {},
-      fail: (res) => {},
-      complete: (res) => {},
+    wx.switchTab({
+      url: '/pages/index/index',
     })
+
   }
 
 })

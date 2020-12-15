@@ -1,18 +1,36 @@
 .swiper-container {
     position: relative;
-    height: 50vh;
+    height: 60vh;
 }
 
 swiper {
-    margin-top: 25vh;
+    margin-top: 16vh;
     height: 50vh;
     width: 100%;
 }
 
+.swiper-items {
+}
+
 .swiper-image {
-    height: 100%;
-    width: 100%;
-    opacity: 0.9;
+    display: block;
+    margin: 0 auto;
+    height: 50%;
+    width: 50%;
+}
+
+.title {
+    font-size: 30px;
+    color: #D78906;
+    line-height: 70px;
+    text-align: center;
+}
+
+.desc {
+    font-size: 20px;
+    color: rgb(131,143,158);
+    line-height: 40px;
+    text-align: center;
 }
 
 .dots {
@@ -45,7 +63,7 @@ swiper {
 .active {
     width: 70rpx;
     height: 10rpx;
-    background-color: #fc4308;
+    background-color: #D78906;
 }
 
 .button-top {
@@ -57,5 +75,9 @@ swiper {
 .button-bottom {
     position: relative;
     height: 40px;
-    width: 120px;
+    width: 50%;
+    border-radius: 10px;
+    background-color: #D78906;
+    color: white;
+
 }

@@ -1,0 +1,47 @@
+.item {
+    width: 90%;
+    display: flex;
+    margin: 10px auto;
+    height: 100px;
+    box-shadow: 2px 2px 2px #dfdfdf, -2px 2px 4px #dfdfdf, 2px 4px 14px #dfdfdf;
+}
+
+.item-left {
+    width: 100px;
+    height: 100px;
+}
+
+.item-left image {
+    width: 100px;
+    height: 100px;
+}
+
+.item-mid {
+    flex: 1;
+    font-size: 12px;
+    margin: 10px 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.title {
+    color: rgb(65, 44, 9);
+}
+
+.price {
+    margin-top: 10px;
+    color: rgb(208, 2, 27);
+}
+
+.item-right {
+    padding: 0 20px;
+    line-height: 100px;
+    font-size: 18px;
+    color: rgb(65, 44, 9);
+}
+
+.grey {
+    color: rgb(195, 195, 195);
+}

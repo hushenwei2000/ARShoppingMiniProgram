@@ -1,4 +1,3 @@
-<!--miniprogram/custom-tab-bar/index.wxml-->
 <cover-view class="tab-bar">
   <cover-view class="tab-bar-border"></cover-view>
   <cover-view class="tab-bar-item" data-path="{{list[0].pagePath}}" data-index="{{0}}" bindtap="switchTab">
@@ -7,7 +6,7 @@
   </cover-view>
   <cover-view class="tab-bar-item" data-path="{{list[1].pagePath}}" data-index="{{1}}" bindtap="switchTab">
     <cover-image src="{{selected === 1 ? list[1].selectedIconPath : list[1].iconPath}}"></cover-image>
-    <cover-view style="color: {{selected === 1 ? selectedColor : color}}">{{list[0].text}}</cover-view>
+    <cover-view style="color: {{selected === 1 ? selectedColor : color}}">{{list[1].text}}</cover-view>
   </cover-view>
   <cover-view class="tab-bar-item center-item" data-path="{{list[2].pagePath}}" data-index="{{2}}" bindtap="switchTab">
     <cover-image mode="widthFix" src="{{selected === 2 ? list[2].selectedIconPath : list[2].iconPath}}"></cover-image>
@@ -17,7 +16,7 @@
     <cover-image src="{{selected === 3 ? list[3].selectedIconPath : list[3].iconPath}}"></cover-image>
     <cover-view style="color: {{selected === 3 ? selectedColor : color}}">{{list[3].text}}</cover-view>
   </cover-view>
-  <cover-view class="tab-bar-item" data-path="{{list[0].pagePath}}" data-index="{{4}}" bindtap="switchTab">
+  <cover-view class="tab-bar-item" data-path="{{list[4].pagePath}}" data-index="{{4}}" bindtap="switchTab">
     <cover-image src="{{selected === 4 ? list[4].selectedIconPath : list[4].iconPath}}"></cover-image>
     <cover-view style="color: {{selected === 4 ? selectedColor : color}}">{{list[4].text}}</cover-view>
   </cover-view>

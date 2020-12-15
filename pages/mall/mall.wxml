@@ -1,0 +1,118 @@
+<view class="mall">
+    <view class="mall-left">
+        <view class="title">
+            当季新款
+        </view>
+        <view class="item" bindtap="handleItemTap">
+            <view class="img-wrapper">
+                <image mode="widthFix" src="/image/cloth1.png"></image>
+            </view>
+            <view class="name">
+                女装 2020冬季高级轻型羽绒茧形连帽外套新款 429458
+            </view>
+            <view class="desc">
+                <view class="price">￥12380</view>
+                <view class="try">
+                    <text>立即试穿</text>
+                    <view class="try-img">
+                        <image mode="widthFix" src="/image/camera.png"></image>
+
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="item" bindtap="handleItemTap">
+            <view class="img-wrapper">
+                <image mode="widthFix" src="/image/cloth1.png"></image>
+            </view>
+            <view class="name">
+                女装 2020冬季高级轻型羽绒茧形连帽外套新款 429458
+            </view>
+            <view class="desc">
+                <view class="price">￥12380</view>
+                <view class="try">
+                    <text>立即试穿</text>
+                    <view class="try-img">
+                        <image mode="widthFix" src="/image/camera.png"></image>
+
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="item" bindtap="handleItemTap">
+            <view class="img-wrapper">
+                <image mode="widthFix" src="/image/cloth1.png"></image>
+            </view>
+            <view class="name">
+                女装 2020冬季高级轻型羽绒茧形连帽外套新款 429458
+            </view>
+            <view class="desc">
+                <view class="price">￥12380</view>
+                <view class="try">
+                    <text>立即试穿</text>
+                    <view class="try-img">
+                        <image mode="widthFix" src="/image/camera.png"></image>
+
+                    </view>
+                </view>
+            </view>
+        </view>
+
+    </view>
+    <view class="mall-right">
+        <view class="item" bindtap="handleItemTap">
+            <view class="img-wrapper">
+                <image mode="widthFix" src="/image/cloth1.png"></image>
+            </view>
+            <view class="name">
+                女装 2020冬季高级轻型羽绒茧形连帽外套新款 429458
+            </view>
+            <view class="desc">
+                <view class="price">￥12380</view>
+                <view class="try">
+                    <text>立即试穿</text>
+                    <view class="try-img">
+                        <image mode="widthFix" src="/image/camera.png"></image>
+
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="item" bindtap="handleItemTap">
+            <view class="img-wrapper">
+                <image mode="widthFix" src="/image/cloth1.png"></image>
+            </view>
+            <view class="name">
+                女装 2020冬季高级轻型羽绒茧形连帽外套新款 429458
+            </view>
+            <view class="desc">
+                <view class="price">￥12380</view>
+                <view class="try">
+                    <text>立即试穿</text>
+                    <view class="try-img">
+                        <image mode="widthFix" src="/image/camera.png"></image>
+
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="item" bindtap="handleItemTap">
+            <view class="img-wrapper">
+                <image mode="widthFix" src="/image/cloth1.png"></image>
+            </view>
+            <view class="name">
+                女装 2020冬季高级轻型羽绒茧形连帽外套新款 429458
+            </view>
+            <view class="desc">
+                <view class="price">￥12380</view>
+                <view class="try">
+                    <text>立即试穿</text>
+                    <view class="try-img">
+                        <image mode="widthFix" src="/image/camera.png"></image>
+
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
