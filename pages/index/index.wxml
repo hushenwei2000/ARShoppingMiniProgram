@@ -1,5 +1,14 @@
 <view>
-    <search-bar></search-bar>
+    <search-bar
+        bind:showinput="onShowInput"
+        bind:hideinput="onHideInput"
+        bind:inputtyping="onInputTyping"
+    ></search-bar>
+    <view class="search-mask" wx:if="{{showSearch}}">
+    </view>
+    <view class="search-items" wx:if="{{showSearch}}">
+        <view class="search-item" wx:for="{{searchResult}}">{{item.name}}</view>
+    </view>
     <view class="swiper-container">
         <swiper indicator-active-color='#fff'>
             <block wx:for="{{imgs}}" wx:for-index="index" wx:key="swiperItem" wx:for-item="item">

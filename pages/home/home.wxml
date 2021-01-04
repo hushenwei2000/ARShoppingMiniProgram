@@ -4,14 +4,18 @@
         <view class="username">客户123203ssqwdqwd4</view>
     </view>
 </view>
-<view class="history">
+<view class="mask" bindtap="login" wx:if="{{!isLoggedIn}}"> 
+    <text>登录</text>后查看个人主页
+</view>
+
+<view class="history" wx:if="{{isLoggedIn}}">
     <view class="history-title">
         <text class="history-title-big">试穿历史</text>
         <text class="history-title-small">最近10次</text>
     </view>
     <clothes-list></clothes-list>
 </view>
-<view class="recommend">
+<view class="recommend" wx:if="{{isLoggedIn}}">
     <view class="title">
         热门推荐
     </view>

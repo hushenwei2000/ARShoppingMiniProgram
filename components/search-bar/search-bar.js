@@ -24,6 +24,7 @@ Component({
             this.setData({
                 inputShowed: true
             });
+            this.triggerEvent("showinput")
         },
         hideInput: function () {
             this.setData({
@@ -31,6 +32,7 @@ Component({
                 inputShowed: false
             });
             // getList(this);
+            this.triggerEvent("hideinput")
         },
         clearInput: function () {
             this.setData({
@@ -44,6 +46,7 @@ Component({
             this.setData({
                 inputVal: e.detail.value
             });
+            this.triggerEvent("inputtyping", {inputVal: e.detail.value})
         }
     },
     _hackBubble: function (e) {
