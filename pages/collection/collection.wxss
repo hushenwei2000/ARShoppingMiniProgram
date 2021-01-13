@@ -46,3 +46,10 @@
 .grey {
     color: rgb(195, 195, 195);
 }
+
+.note {
+    height: 150px;
+    line-height: 150px;
+    width: 100%;
+    color: #666;
+}

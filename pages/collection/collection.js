@@ -1,37 +1,65 @@
 Page({
 
-    data: {
-        list: [{
-            img: "/image/cloth1.jpg",
-            title: "女装 2020巴黎世家高级轻型羽绒茧形连帽外套 429458",
-            price: 12340,
-            desc: "缺货",
-            grey: true
-        }, {
-            img: "/image/cloth2.jpg",
-            title: "女装 2020巴黎世家高级轻型羽绒茧形连帽外套 429458",
-            price: 12340,
-            desc: "已下架",
-            grey: true
+    onShow() {
+        var t = getApp().globalData
+        console.log(t)
+        if (t.token) {
+            this.setData({
+                globalToken: t.token
+            })
+        }
+        this.updateList()
+    },
 
-        }, {
-            img: "/image/cloth3.jpg",
-            title: "女装 2020巴黎世家高级轻型羽绒茧形连帽外套 429458",
-            price: 12340,
-            desc: "购买",
-            grey: false
-        }],
+    updateList() {
+        var fl = []
+        var i = 0
+        var globalToken = this.data.globalToken
+        var obj = null
+        var that = this
+        console.log(globalToken)
+        wx.request({
+            url: 'http://zs3.lwydev.xyz/favor/list',
+            method: 'POST',
+            data: {
+                token: globalToken,
+                page: 1
+            },
+            success(res) {
+                fl = res.data.data.favorlist
+                if (!fl) {
+                    return
+                }
+                console.log(fl)
+                for (; i < fl.length; i++) {
+                    obj = fl[i]
+                    obj.grey = obj.status == 1 ? false : true
+                    obj.desc = obj.status == 1 ? '有货' : obj.status == 2 ? '缺货' : '已下架'
+                }
+                console.log(fl)
+                that.setData({
+                    list: fl
+                })
+            }
+        })
+    },
+
+    data: {
+        list: [],
+        globalToken: ''
     },
     handleItemTap(e) {
+        var name = e.target.dataset.name || e.currentTarget.dataset.name
+        console.log(name)
         wx.navigateTo({
-            url: '/pages/detail/detail',
-            complete(res) {
-                console.log(res)
-            }
+            url: '/pages/detail/detail?name=' + name,
         })
     },
     deleteImage: function (e) {
         var that = this;
+        var id = e.currentTarget.dataset.id;
+        var globalToken = this.data.globalToken
+
         var list = that.data.list;
         var index = e.currentTarget.dataset.index;
         wx.showModal({
@@ -46,6 +74,18 @@ Page({
                 that.setData({
                     list
                 });
+                wx.request({
+                    url: 'http://zs3.lwydev.xyz/favor/delete',
+                    method: 'POST',
+                    data: {
+                        token: globalToken,
+                        id
+                    },
+                    success(res) {
+                        console.log(res)
+                    }
+                })
+                
             }
         })
     }

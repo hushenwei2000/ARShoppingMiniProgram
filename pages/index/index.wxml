@@ -7,7 +7,7 @@
     <view class="search-mask" wx:if="{{showSearch}}">
     </view>
     <view class="search-items" wx:if="{{showSearch}}">
-        <view class="search-item" wx:for="{{searchResult}}">{{item.name}}</view>
+        <view class="search-item" wx:for="{{searchResult}}" bindtap="handleSearchItemTap" data-name="{{item.name}}">{{item.name}}</view>
     </view>
     <view class="swiper-container">
         <swiper indicator-active-color='#fff'>
@@ -35,9 +35,9 @@
     <view class="title">
         当季新款
     </view>
-    <clothes-list></clothes-list>
+    <clothes-list id="component1" pts="{{products}}"></clothes-list>
     <view class="title">
         热门推荐
     </view>
-    <clothes-list></clothes-list>
+    <clothes-list id="component2" pts="{{products}}"></clothes-list>
 </view>

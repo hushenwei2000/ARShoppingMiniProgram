@@ -32,18 +32,66 @@ Page({
         })
     },
 
+
+    validateLogin() {
+        var username = this.data.username
+        var password = this.data.password
+        var patrn=/^[a-zA-Z]{1}([a-zA-Z0-9]|[_]){2,19}$/;   
+        if (!patrn.exec(username)) {
+            wx.showToast({
+                icon: 'none',
+                title: '用户名必须以字母开头的3-20个、可带数字和下划线字符串'
+            })
+            return false
+        }
+        if(password.length == 0) {
+            wx.showToast({
+                icon: 'none',
+                title: '密码不能为空'
+            })
+            return false
+        }
+        return true
+    },
+
+    validateRegister() {
+        var username = this.data.username
+        var password = this.data.password
+        var phone = this.data.phone
+        console.log(username, password, phone)
+        var patrn=/^[a-zA-Z]{1}([a-zA-Z0-9]|[_]){2,19}$/;   
+        if (!patrn.exec(username)) {
+            wx.showToast({
+                icon: 'none',
+                title: '用户名必须以字母开头的3-20个、可带数字和下划线字符串'
+            })
+            return false
+        }
+        if(password.length == 0) {
+            wx.showToast({
+                icon: 'none',
+                title: '密码不能为空'
+            })
+            return false
+        }
+        if((/^1[3456789]d{9}$/.test(phone))) {
+            wx.showToast({
+                icon: 'none',
+                title: '手机号格式不正确'
+            })
+            return false
+        }
+        return true
+    },
+
     // 登录 
     login: function () {
         var that = this
-        if (this.data.username.length == 0 || this.data.password.length == 0) {
-            wx.showToast({
-                title: '用户名和密码不能为空',
-                icon: 'none',
-                duration: 2000
-            })
-        }
         if (this.data.loginState) {
             // 发送登录请求
+            if (!this.validateLogin()) {
+                return;
+            }
             wx.request({
                 url: 'http://zs3.lwydev.xyz/user/usernamelogin',
                 method: 'POST',
@@ -61,6 +109,20 @@ Page({
                         })
                         app.globalData.username = that.data.username
                         app.globalData.token = res.data.data.token
+                        wx.setStorage({
+                          data: that.data.username,
+                          key: 'username',
+                          success(res) {
+                              console.log(res)
+                          }
+                        })
+                        wx.setStorage({
+                            data: res.data.data.token,
+                            key: 'token',
+                            success(res) {
+                                console.log(res)
+                            }
+                          })
                         wx.navigateBack({
                             delta: 0,
                         })
@@ -83,6 +145,9 @@ Page({
             })
         } else {
             // 发送注册短信
+            if(!this.validateRegister()) {
+                return false;
+            }
             wx.request({
                 url: 'http://zs3.lwydev.xyz/user/register',
                 method: 'POST',
@@ -125,6 +190,9 @@ Page({
     sendCode() {
         var that = this
         var currentTime = 60
+        if(!this.validateRegister()) {
+            return false;
+        }
         this.setData({
             codeBgc: '#ccc'
         })

@@ -1,16 +1,14 @@
 <view class="swiper-container">
-    <swiper indicator-active-color='#fff'>
-        <block wx:for="{{imgs}}" wx:for-index="index" wx:key="swiperItem" wx:for-item="item">
+    <swiper indicator-active-color='#fff'>        
             <swiper-item class="swiper-items">
-                <image class="swiper-image" src="{{item}}"></image>
+                <image class="swiper-image" src="{{product.imageurl}}"></image>
             </swiper-item>
-        </block>
     </swiper>
 </view>
-<view class="title">女装 高级轻型羽绒茧形连帽外套 429458</view>
+<view class="title">{{product.name}}</view>
 <view class="desc">
-    <view class="price">￥13400</view>
-    <view class="like">
+    <view class="price">￥{{product.price}}</view>
+    <view class="like" bindtap="handleLike">
         <image src="/image/like.png" mode="widthFix"></image>
     </view>
 </view>

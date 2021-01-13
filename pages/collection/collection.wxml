@@ -1,10 +1,14 @@
-<view class="item" wx:for="{{list}}" data-index="{{index}}" bindlongpress="deleteImage">
-    <view class="item-left" bindtap="handleItemTap">
-        <image src="{{item.img}}"></image>
+<view wx:if="{{!list}}" class="note">
+    您还没有收藏商品哦！
+</view>
+
+<view class="item" wx:for="{{list}}" data-index="{{index}}"  bindlongpress="deleteImage">
+    <view class="item-left" bindtap="handleItemTap" data-name="{{item.name}}">
+        <image src="{{item.imageurl}}"></image>
 
     </view>
     <view class="item-mid">
-        <view class="title">{{item.title}}</view>
+        <view class="title">{{item.name}}</view>
         <view class="price">￥{{item.price}}</view>
     </view>
     <view class="item-right{{item.grey ? ' grey' : ''}}">
