@@ -1,8 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/login/login",
     "pages/guide/guide",
+    "pages/login/login",
     "pages/mall/mall",
     "pages/home/home",
     "pages/collection/collection",
@@ -54,5 +54,6 @@
         "text": "我的"
       }
     ]
-  }
+  },
+  "usingComponents": {}
 }

@@ -1,6 +1,6 @@
 <view class="header">
     <view class="header-content">
-        <view class="avatar">
+        <view class="avatar" bindlongpress="logout">
             <image src="/image/avatar.jpg" mode="widthFix"></image>
         </view>
         <view class="username">{{username}}</view>
@@ -15,11 +15,14 @@
         <text class="history-title-big">试穿历史</text>
         <text class="history-title-small">最近10次</text>
     </view>
-    <clothes-list id="component1" pts="{{products}}"></clothes-list>
+    <clothes-list id="component1" pts="{{products}}" wx:if="{{!nohistory}}"></clothes-list>
+    <view class="nohistory" wx:if="{{nohistory}}">
+        你还没有浏览记录哦~
+    </view>
 </view>
 <view class="recommend" wx:if="{{isLoggedIn}}">
     <view class="title">
         热门推荐
     </view>
-    <clothes-list></clothes-list>
+    <clothes-list  id="component2" pts="{{hotproducts}}"></clothes-list>
 </view>

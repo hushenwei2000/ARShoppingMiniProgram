@@ -22,6 +22,6 @@ App({
   },
   globalData: {
     username: '',
-    token: ''
+    token: '',
   }
 })

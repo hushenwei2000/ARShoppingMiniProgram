@@ -1,8 +1,8 @@
-<view wx:if="{{!list}}" class="note">
-    您还没有收藏商品哦！
+<view wx:if="{{nolike}}" class="note">
+    你还没有收藏商品哦~
 </view>
 
-<view class="item" wx:for="{{list}}" data-index="{{index}}"  bindlongpress="deleteImage">
+<view class="item" wx:if="{{!nolike}}" wx:for="{{list}}" data-index="{{index}}"  bindlongpress="deleteImage">
     <view class="item-left" bindtap="handleItemTap" data-name="{{item.name}}">
         <image src="{{item.imageurl}}"></image>
 

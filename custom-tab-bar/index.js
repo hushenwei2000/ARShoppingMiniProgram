@@ -30,21 +30,22 @@ Component({
       text: "我的"
     }]
   },
-  attached() {
-  },
+  attached() {},
   methods: {
     switchTab(e) {
       const data = e.currentTarget.dataset
       const url = data.path
-      
-      wx.switchTab({url})
+
+      wx.switchTab({
+        url
+      })
       var that = this
-      // setTimeout(() => {
-        that.setData({
-          selected: data.index
-        })
-      // }, 1000);
-      
+      // 在每个页面的onShow写：
+      // if (typeof this.getTabBar === 'function' && this.getTabBar()) {
+      //   this.getTabBar().setData({
+      //     selected: 0
+      //   })
+      // }
     }
   }
 })

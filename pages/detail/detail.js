@@ -13,6 +13,7 @@ Page({
      */
     onLoad: function (options) {
         var name = options.name
+        name = name.substr(0, 22)
         console.log(name)
         var that = this
         wx.request({

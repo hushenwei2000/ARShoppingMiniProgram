@@ -158,22 +158,30 @@ Page({
                 },
                 success(res) {
                     console.log(res)
-                    if (res.data.code == 0) {
-                        wx.showToast({
-                            title: '注册成功',
-                            icon: 'success',
-                            duration: 2000
-                        })
-                        that.setData({
-                            loginState: true
-                        })
-                    }else {
-                        wx.showToast({
-                            title: '注册失败，请稍后重试',
-                            icon: 'none',
-                            duration: 2000
-                        })
-                    }
+                    wx.showToast({
+                        title: '注册成功',
+                        icon: 'success',
+                        duration: 2000
+                    })
+                    that.setData({
+                        loginState: true
+                    })
+                    // if (res.data.code == 0) {
+                    //     wx.showToast({
+                    //         title: '注册成功',
+                    //         icon: 'success',
+                    //         duration: 2000
+                    //     })
+                    //     that.setData({
+                    //         loginState: true
+                    //     })
+                    // }else {
+                    //     wx.showToast({
+                    //         title: '注册失败，请稍后重试',
+                    //         icon: 'none',
+                    //         duration: 2000
+                    //     })
+                    // }
                 },
                 fail(res) {
                     console.log(res)
